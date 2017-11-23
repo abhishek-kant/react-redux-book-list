@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import BookList from '../BookList'
+import BookList from '../../containers/BookList'
 import logo from './logo.svg';
 import './App.css';
 
