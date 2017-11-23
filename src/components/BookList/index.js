@@ -1,27 +1,27 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {List, ListItem} from 'material-ui/List';
 
 class BookList extends React.Component{
 
   renderList(){
     return this.props.books.map((book) => {
       return(
-        <li key={book.id} className="list-group-item">{book.title}</li>
+        <ListItem key={book.id} primaryText={book.title} />
       )
     });
   }
 
   render(){
     return(
-      <ul className="list-group col-sm-4">
+      <List>
         { this.renderList() }
-      </ul>
+      </List>
     )
   }
 }
 
 function mapStateToProps(state) {
-  debugger
   return{
     books: state.books
   }
